@@ -1,0 +1,15 @@
+- name: Om
+  hosts: localhost
+
+  tasks:
+  -  name: "this is to stop the tomcat server ... "
+     command: /Users/Om/tomcat/apache-tomcat-9.0.12/bin/shutdown.sh
+     register: resultstop
+  
+  -  name: "this is to start the tomcat server ... "
+     command: /Users/Om/tomcat/apache-tomcat-9.0.12/bin/startup.sh
+     register: result_start
+
+  -  debug: 
+      var: resultstop.stdout_lines,result_start.stdout_lines
+      #var: result_start.stdout_lines
