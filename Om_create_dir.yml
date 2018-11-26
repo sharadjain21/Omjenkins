@@ -1,0 +1,9 @@
+ - hosts: localhost
+   tasks:
+   - debug: 
+        msg: "Running creating directory"
+   - import_role:
+        name: OmRole_createDir
+   - debug:
+        msg: "Successfully done"
+

@@ -1,0 +1,9 @@
+---
+# tasks file for OmRole_createDir
+- name: Creates Directory
+  file: 
+    path: /tmp/abcdcheck
+    state: directory
+    owner: Om	
+    group: staff
+    mode: 0775

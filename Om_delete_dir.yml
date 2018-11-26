@@ -1,0 +1,9 @@
+ - hosts: localhost
+   tasks:
+   - debug: 
+        msg: "Running deleting directory"
+   - import_role:
+        name: OmRole_deleteDir
+   - debug:
+        msg: "Successfully done"
+
