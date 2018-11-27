@@ -1,0 +1,7 @@
+---
+# tasks file for OmRole_getTomcatBinaries
+- name: Download Tomcat binaries
+  get_url: 
+      url: http://archive.apache.org/dist/tomcat/tomcat-8/v8.0.23/bin/apache-tomcat-8.0.23.tar.gz
+      dest: /tmp/abcdcheck
+      timeout: 300

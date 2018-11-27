@@ -1,0 +1,9 @@
+ - hosts: localhost
+   tasks:
+   - debug: 
+        msg: "Downloading Tomcat binaries"
+   - import_role:
+        name: OmRole_getTomcatBinaries
+   - debug:
+        msg: "Successfully done"
+
