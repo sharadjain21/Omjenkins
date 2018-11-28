@@ -1,0 +1,9 @@
+ - hosts: localhost
+   tasks:
+   - debug: 
+        msg: "Installing Tomcat"
+   - import_role:
+        name: OmRole_installTomcat
+   - debug:
+        msg: "Successfully done"
+

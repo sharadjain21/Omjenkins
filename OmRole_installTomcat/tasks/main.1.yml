@@ -1,0 +1,9 @@
+---
+# tasks file for OmRole_installTomcat
+- name: Install Tomcat
+  tasks: 
+    - name: Copy script
+      copy: src=tomcat_install.sh dest=/tmp/abcdcheck
+
+    - name: Execute script
+      command: sh /tmp/abcdcheck/tomcat_install.sh

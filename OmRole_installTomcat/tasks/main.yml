@@ -1,0 +1,4 @@
+---
+# tasks file for OmRole_installTomcat
+- name: Install Tomcat
+  script: tomcat_install.sh
