@@ -1,0 +1,4 @@
+---
+# tasks file for OmRole_productStop
+- name: This role is for stopping the product
+  script: tomcat_stop.sh
