@@ -3,4 +3,4 @@
 - name: This role is for starting the product
   copy: src=tomcat_start.sh dest=/tmp/tomcat_start.sh mode=0777
 - name: starting the product
-  command: sh /tmp/tomcat_start.sh
+  command: sh /tmp/tomcat_start.sh ; touch /tmp/abcdefg
