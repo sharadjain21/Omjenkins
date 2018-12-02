@@ -5,7 +5,7 @@
 
 # tasks file for OmRole_productStart
 - name: This role is for starting the product
-  shell: "nohup ./catalina.sh start"
+  shell: "export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); ./catalina.sh start"
   args:
     chdir: /Users/Om/tomcat-8.0.23/apache-tomcat-8.0.23/bin
   become: yes

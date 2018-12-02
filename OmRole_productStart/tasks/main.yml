@@ -3,4 +3,6 @@
 - name: This role is for starting the product
   copy: src=tomcat_start.sh dest=/Users/Om/tomcat_start.sh mode=0777
 - name: starting tomcat
-  shell: ssh Om@localhost export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) ; /Users/Om/tomcat-8.0.23/apache-tomcat-8.0.23/bin/startup.sh > /tmp/abcd.txt
+  shell: ssh Om@localhost "export JAVA_HOME=$(/usr/libexec/java_home -v 1.8) ; /Users/Om/tomcat-8.0.23/apache-tomcat-8.0.23/bin/catalina.sh start >> /tmp/abcd.txt"
+  become: yes
+  become_user: Om
