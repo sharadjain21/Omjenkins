@@ -1,0 +1,13 @@
+---
+# setting .profile
+- name: setting profile
+  shell: . ~/.profile
+
+# tasks file for OmRole_productStart
+- name: This role is for starting the product
+  shell: "nohup ./catalina.sh start"
+  args:
+    chdir: /Users/Om/tomcat-8.0.23/apache-tomcat-8.0.23/bin
+  become: yes
+  become_user: Om
+  #shell: ssh Om@localhost export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home ; export CATALINA_HOME=/Users/Om/tomcat-8.0.23/apache-tomcat-8.0.23 ; nohup /Users/Om/tomcat-8.0.23/apache-tomcat-8.0.23/bin/startup.sh > /tmp/abcd.txt

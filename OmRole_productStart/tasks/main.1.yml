@@ -1,4 +1,0 @@
----
-# tasks file for OmRole_productStart
-- name: This role is for starting the product
-  script: tomcat_start.sh
