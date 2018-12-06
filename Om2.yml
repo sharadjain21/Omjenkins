@@ -13,5 +13,5 @@
 #     register: resultstart
 
   -  debug: 
-      var: resultstop.stdout_lines,resultstart.stdout_lines
-      #var: result_start.stdout_lines
+      #var: resultstop.stdout_lines,resultstart.stdout_lines
+      var: resultstop.stdout_lines
