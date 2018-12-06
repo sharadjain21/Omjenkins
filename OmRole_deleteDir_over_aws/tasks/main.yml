@@ -1,0 +1,9 @@
+---
+# tasks file for OmRole_deleteDir_aws
+- name: Delete Directory
+  file:
+    path: /tmp/abcdcheck
+    state: absent
+    owner: Om
+    group: staff
+    mode: 0775

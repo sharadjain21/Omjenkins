@@ -1,5 +1,14 @@
 ---
 # tasks file for OmRole_installJava
+
+# check if the JAVA version is already installed
+  - name: "This is to check if the application is already installed"
+    become_user: root
+    yum:
+      list: java-1.8.0-openjdk.x86_64
+    register: java_result
+
+
   -  name: "This is to install java ... "
      become_user: root
      #command: yum -y install java-1.8.0-openjdk.x86_64
@@ -9,3 +18,4 @@
      register: resultstart
   -  debug: 
       var: resultstart.results[0]
+     when: java_result.results[0].yumstate != 'installed'

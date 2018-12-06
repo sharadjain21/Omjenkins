@@ -1,5 +1,5 @@
 ---
-# tasks file for OmRole_createDir
+# tasks file for OmRole_createDir_aws
 - name: Creates Directory
   file: 
     path: /tmp/abcdcheck
