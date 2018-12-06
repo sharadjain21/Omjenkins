@@ -1,5 +1,8 @@
- - hosts: localhost
-   tasks:
+- name: Install Java programme
+  hosts: ec2-18-218-85-244.us-east-2.compute.amazonaws.com
+  remote_user: ec2-user
+
+  tasks:
    - debug: 
         msg: "Installing JAVA"
    - import_role:
