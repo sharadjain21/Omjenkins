@@ -1,5 +1,5 @@
 - name: Install Java programme
-  hosts: ec2-18-218-85-244.us-east-2.compute.amazonaws.com
+  hosts: ec2-13-233-86-176.ap-south-1.compute.amazonaws.com
   remote_user: ec2-user
 
   tasks:
