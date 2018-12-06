@@ -1,9 +1,11 @@
 ---
 # tasks file for OmRole_installJava
-  -  name: "this is to install java ... "
+  -  name: "This is to install java ... "
      become_user: root
-     command: yum -y install java-1.8.0-openjdk.x86_64
-     register: resultstart
-
+     #command: yum -y install java-1.8.0-openjdk.x86_64
+     yum:
+       name: java-1.8.0-openjdk.x86_64
+       state: present   
+       register: resultstart
   -  debug: 
       var: resultstart.stdout_lines
