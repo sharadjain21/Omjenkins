@@ -1,0 +1,8 @@
+ - hosts: localhost
+   tasks:
+   - debug: 
+        msg: "Installing JAVA"
+   - import_role:
+        name: OmRole_installJava
+   - debug:
+        msg: "Successfully done"

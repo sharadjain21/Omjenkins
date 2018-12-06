@@ -1,0 +1,9 @@
+---
+# tasks file for OmRole_installJava
+  -  name: "this is to install java ... "
+     become_user: root
+     command: sudo yum -y install java-1.8.0-openjdk.x86_64
+     register: resultstart
+
+  -  debug: 
+      var: resultstart.stdout_lines
