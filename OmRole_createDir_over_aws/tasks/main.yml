@@ -4,6 +4,6 @@
   file: 
     path: /tmp/abcdcheck
     state: directory
-    owner: Om
-    group: staff
+    owner: root
+    group: root
     mode: 0775
