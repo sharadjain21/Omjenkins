@@ -1,0 +1,4 @@
+---
+# tasks file for OmRole_installTomcat_over_aws
+- name: Install Tomcat over AWS
+  script: tomcat_install_over_aws.sh
