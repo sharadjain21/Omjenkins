@@ -1,4 +1,4 @@
- - hosts: {{ hostname1 }}
+ - hosts: ec2-13-233-86-176.ap-south-1.compute.amazonaws.com
    remote_user: ec2-user
    become: yes
    become_user: root
