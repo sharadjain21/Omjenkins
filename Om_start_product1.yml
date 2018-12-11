@@ -1,0 +1,15 @@
+ - hosts: "{{ hostname1 }}"
+   vars:
+      product: "{{ prdct|lower }}"
+   tasks:
+    - debug:
+        msg: "Product is {{ product }}" 
+    - fail: msg="Unsupported product"
+      when: product != "tomcat"
+    - import_role:
+        name: OmRole_productStart1
+      vars:
+        hostname1: "{{ hostname1 }}"
+    - debug:
+        msg: "Successfully started"
+
