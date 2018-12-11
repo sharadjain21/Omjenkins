@@ -1,7 +1,7 @@
 ---
 # tasks file for OmRole_productStart1
 - name: This role is for starting the product
-  shell: "nohup ./catalina.sh start"
+  shell: "nohup ./catalina.sh start; echo {{ hostname1 }} >> /tmp/abcd"
   args:
      chdir: "/root/tomcat-8.0.23/apache-tomcat-8.0.23/bin"
   become: yes
