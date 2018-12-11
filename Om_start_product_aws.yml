@@ -10,7 +10,7 @@
     - fail: msg="Unsupported product"
       when: product != "tomcat"
     - import_role:
-        name: OmRole_productStart1
+        name: OmRole_productStart_aws
       vars:
         hostname1: "{{ hostname1 }}"
     - debug:
