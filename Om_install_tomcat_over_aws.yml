@@ -3,7 +3,7 @@
    become: yes
    become_user: root
    vars:
-     version1: {{ prd_version|lower }}
+     version1: "{{ prd_version|lower }}"
    tasks:
    - debug: 
         msg: "Installing Tomcat over AWS"
