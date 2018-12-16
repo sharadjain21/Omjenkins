@@ -10,7 +10,7 @@
    - import_role:
         name: OmRole_installTomcat_over_aws
      vars:
-        version1: "{{ version1 }}"
+        versn1: "{{ version1 }}"
    - debug:
         msg: "Successfully done"
 
