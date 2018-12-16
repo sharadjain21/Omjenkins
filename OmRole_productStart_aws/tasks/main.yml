@@ -5,7 +5,7 @@
   become: yes
   become_user: root
 - debug:
-    msg: "This is {{ apache_name }}['stdout']"
+    msg: "This is {{ apache_name.stdout }}"
 - name: This role is for starting the product
   shell: "nohup ./catalina.sh start; echo {{ hostname1 }} >> /tmp/abcd"
   args:
