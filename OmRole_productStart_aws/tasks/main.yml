@@ -1,6 +1,6 @@
 ---
 # tasks file for OmRole_productStart1
-- shell: cd $HOME;ls -d /root/apache*
+- shell: cd $HOME;ls -d apache*
   register: apache_name
 - name: This role is for starting the product
   shell: "nohup ./catalina.sh start; echo {{ hostname1 }} >> /tmp/abcd"
