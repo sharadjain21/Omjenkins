@@ -4,6 +4,8 @@
   register: apache_name
   become: yes
   become_user: root
+- debug:
+    msg: "This is {{ apache_name }}"
 - name: This role is for starting the product
   shell: "nohup ./catalina.sh start; echo {{ hostname1 }} >> /tmp/abcd"
   args:
