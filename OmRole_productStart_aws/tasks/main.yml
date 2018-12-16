@@ -1,6 +1,6 @@
 ---
 # tasks file for OmRole_productStart1
-- shell: cd $HOME;ls -d apache*
+- shell: cd /root;ls -d apache*
   register: apache_name
   become: yes
   become_user: root
