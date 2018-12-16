@@ -2,11 +2,15 @@
    remote_user: ec2-user
    become: yes
    become_user: root
+   vars:
+     version1: {{ product_version|lower }}
    tasks:
    - debug: 
         msg: "Installing Tomcat over AWS"
    - import_role:
         name: OmRole_installTomcat_over_aws
+     vars:
+        version1: "{{ version1 }}"
    - debug:
         msg: "Successfully done"
 
