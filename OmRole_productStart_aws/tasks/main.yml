@@ -1,6 +1,6 @@
 ---
 # tasks file for OmRole_productStart1
-- shell: ls -l /root/apache* | cut -d' ' -f9
+- shell: "ls -l /root/apache* | cut -d' ' -f9"
   register: apache_name
   become: yes
   become_user: root
