@@ -7,6 +7,6 @@
 - name: This role is for starting the product
   shell: "nohup ./catalina.sh start; echo {{ hostname1 }} >> /tmp/abcd"
   args:
-     chdir: "/root/{{ apache_name }}/{{ apache_name }}/bin"
+     chdir: '/root/"{{ apache_name }}"/"{{ apache_name }}"/bin'
   become: yes
   become_user: root
