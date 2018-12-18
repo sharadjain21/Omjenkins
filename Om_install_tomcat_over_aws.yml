@@ -11,6 +11,7 @@
         name: OmRole_installTomcat_over_aws
      vars:
         versn1: "{{ version1 }}"
+        sversion1: "{{ subversion1 }}"
    - debug:
         msg: "Successfully done"
 
