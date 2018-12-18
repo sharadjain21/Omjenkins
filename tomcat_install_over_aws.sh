@@ -1,6 +1,6 @@
 #!/bin/sh
 cd /tmp/abcdcheck
-echo "Hello passed variable is $1"
+echo "Hello passed variable is $1 and $2"
 versn1=$1
 sversion1=$2
 tomcat_to_be_installed=apache-tomcat-$versn1$sversion1
