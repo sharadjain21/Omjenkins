@@ -1,2 +1,3 @@
 ---
 # vars file for OmRole_getTomcatBinaries_over_aws
+mnversion: "{{ mversion.split('.')[0] }}"

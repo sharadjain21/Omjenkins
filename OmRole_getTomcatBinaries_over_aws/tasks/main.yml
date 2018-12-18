@@ -1,8 +1,6 @@
 ---
 # tasks file for OmRole_getTomcatBinaries_aws
 - name: Download Tomcat binaries over AWS
-  var: 
-    mnversion: "{{ mversion.split('.')[0]}}"
   get_url: 
       url: http://archive.apache.org/dist/tomcat/tomcat-{{ mnversion }}/v{{ mversion }}.{{ sversion }}/bin/apache-tomcat-{{ sversion }}.tar.gz
       dest: /tmp/abcdcheck
