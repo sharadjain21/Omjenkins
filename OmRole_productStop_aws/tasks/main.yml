@@ -1,8 +1,14 @@
 ---
-# tasks file for OmRole_productStart1
-- name: This role is for starting the product
+# tasks file for OmRole_productStop
+- shell: "ls /root/apache*[0-9] | tr -s ' ' | cut -d' ' -f9"
+  register: apache_name
+  become: yes
+  become_user: root
+- debug:
+    msg: "This is {{ apache_name.stdout }}"
+- name: This role is for stopping the product
   shell: "nohup ./catalina.sh stop; echo {{ hostname1 }} >> /tmp/abcd"
   args:
-     chdir: "/root/tomcat-8.0.23/apache-tomcat-8.0.23/bin"
+     chdir: "/root/{{ apache_name.stdout }}/{{ apache_name.stdout }}/bin"
   become: yes
   become_user: root
