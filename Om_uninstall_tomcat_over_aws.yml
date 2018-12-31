@@ -8,7 +8,7 @@
    - debug: 
         msg: "Un-installing Tomcat over AWS"
    - import_role:
-        name: OmRole_uninstall_tomcat_over_aws
+        name: Om_uninstall_tomcat_over_aws
      vars:
         versn1: "{{ version1 }}"
         sversion1: "{{ subversion1 }}"
