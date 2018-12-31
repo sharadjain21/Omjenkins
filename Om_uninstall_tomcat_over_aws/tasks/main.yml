@@ -1,0 +1,4 @@
+---
+# tasks file for Om_uninstall_tomcat_over_aws
+- name: Uninstall Tomcat over AWS
+  script: tomcat_uninstall_over_aws.sh "{{ versn1 }}" "{{ sversion1 }}"
