@@ -1,4 +1,6 @@
 - name: This is for JAVA download and install task
+  become: yes
+  become_user: root
   set_fact:
    java_download_url1: "{{ '8' if (a>b) }}"
    java_download_url: 'https://s3.ap-south-1.amazonaws.com/om-bucket/java_binaries/jdk-{{ a }}.tar.gz'
