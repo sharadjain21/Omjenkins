@@ -1,6 +1,6 @@
 #!/bin/sh
-cd /tmp/abcdcheck
-jdk_version = $1
+cd /tmp/abcdcheck1
+jdk_version=$1
 echo $jdk_version > ~/.profile
 version=echo $jdk_version | cut -d "." -f1
 echo $version >> ~/.profile
