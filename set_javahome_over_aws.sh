@@ -2,7 +2,7 @@
 cd /tmp/abcdcheck1
 jdk_version=$1
 echo $jdk_version > ~/.profile
-version=echo $jdk_version | cut -d "." -f1
+version=`echo $jdk_version | cut -d "." -f1`
 echo $version >> ~/.profile
 tar xvzf jdk_version
 rm -rf *.gz
