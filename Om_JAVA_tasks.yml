@@ -1,0 +1,10 @@
+- name: This is for JAVA download and install task
+  set_fact:
+   java_download_url1: "{{ '8' if (a>b) }}"
+   java_download_url: 'https://s3.ap-south-1.amazonaws.com/om-bucket/java_binaries/jdk-{{ a }}.tar.gz'
+- debug:
+    msg: "{{ java_download_url }}"
+- name: Downloading JAVA
+  get_url: url={{ java_download_url }} dest=/tmp/abcdcheck timeout=500
+- name: Setting JAVA_HOME
+  script: set_javahome_over_aws.sh jdk-{{ a }}.tar.gz
