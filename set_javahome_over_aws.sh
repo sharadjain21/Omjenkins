@@ -1,12 +1,12 @@
 #!/bin/sh
 cd /tmp/abcdcheck1
 jdk_version=$1
-echo $jdk_version > ~/.profile
+#echo $jdk_version > ~/.profile
 version=`echo $jdk_version | cut -d "." -f1`
-echo $version >> ~/.profile
+#echo $version >> ~/.profile
 tar xvzf $jdk_version
 rm -rf *.gz
-#mkdir -p ~/java_for_tomcat
+mkdir -p ~/java_for_tomcat
 cp -R  $version* ~/java_for_tomcat/
 cd ~/java_for_tomcat/$version*
 java_name=${PWD##*/}
