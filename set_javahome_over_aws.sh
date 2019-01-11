@@ -5,7 +5,7 @@ echo $jdk_version > ~/.profile
 version=`echo $jdk_version | cut -d "." -f1`
 echo $version >> ~/.profile
 tar xvzf jdk_version
-rm -rf *.gz
+#rm -rf *.gz
 #mkdir -p ~/java_for_tomcat
 cp -R  version* ~/java_for_tomcat/
 cd ~/java_for_tomcat/version*
