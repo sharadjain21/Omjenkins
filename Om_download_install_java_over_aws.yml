@@ -6,7 +6,7 @@
   vars:
    a : 11
    b : 2
-   java_version : 9
+   java_version : "{{ java_version1 }}"
   tasks:
     - name : Om_JAVA_tasks
       include_tasks: Om_JAVA_tasks.yml
