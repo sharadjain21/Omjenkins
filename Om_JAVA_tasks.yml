@@ -3,7 +3,7 @@
   become_user: root
   set_fact:
    java_download_url1: "{{ '8' if (a>b) }}"
-   java_download_url: 'https://s3.ap-south-1.amazonaws.com/om-bucket/java_binaries/jdk-{{ a }}.tar.gz'
+   java_download_url: 'https://s3.ap-south-1.amazonaws.com/om-bucket/java_binaries/jdk-{{ java_version }}.tar.gz'
 - debug:
     msg: "{{ java_download_url }}"
 - name: Downloading JAVA
@@ -12,4 +12,4 @@
     dest: "/tmp/abcdcheck1" 
     timeout: 500
 - name: Setting JAVA_HOME
-  script: set_javahome_over_aws.sh "jdk-{{ a }}.tar.gz"
+  script: set_javahome_over_aws.sh "jdk-{{ java_version }}.tar.gz"
