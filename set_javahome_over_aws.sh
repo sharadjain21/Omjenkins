@@ -10,7 +10,7 @@ mkdir -p ~/java_for_tomcat
 cp -R  $version* ~/java_for_tomcat/
 cd ~/java_for_tomcat/$version*
 java_name=${PWD##*/}
-echo "Hello $java_name" >> ~/.profile
-echo "export JAVA_HOME=/java_for_tomcat/$java_name" >> ~/.profile
+#echo "Hello $java_name" >> ~/.profile
+echo "export JAVA_HOME=/java_for_tomcat/$java_name" > ~/.profile
 echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> ~/.profile
 . ~/.profile
